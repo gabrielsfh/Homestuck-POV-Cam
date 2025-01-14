@@ -63,24 +63,24 @@ window.onload = function () {
 
     timelinesenableall.onclick = function () {
         var checkboxes = t.querySelectorAll("[type='checkbox']");
-        for (var i in checkboxes) {
-            checkboxes[i].checked = false;
-            checkboxes[i].click();
-        }
+        checkboxes.forEach((checkbox) => {
+            checkbox.checked = false;
+            checkbox.click();
+        });
     };
-
+    
     timelinesdisableall.onclick = function () {
         var checkboxes = t.querySelectorAll("[type='checkbox']");
-        for (var i in checkboxes) {
-            checkboxes[i].checked = true;
-            checkboxes[i].click();
-        }
+        checkboxes.forEach((checkbox) => {
+            checkbox.checked = true;
+            checkbox.click();
+        });
     };
-
+    
     timelinesflipall.onclick = function () {
         var checkboxes = t.querySelectorAll("[type='checkbox']");
-        for (var i in checkboxes) {
-            checkboxes[i].click();
-        }
-    };
+        checkboxes.forEach((checkbox) => {
+            checkbox.click();
+        });
+    };   
 };

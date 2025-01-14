@@ -78,7 +78,7 @@ function modifyPage() {
 
     if (SOLinkContainer) {
         var optionsLink = document.createElement("a");
-        optionsLink.href = chrome.extension.getURL("options/options.html");
+        optionsLink.href = chrome.runtime.getURL("options/options.html");
         optionsLink.innerText = "POV Cam Options";
         optionsLink.style["font-weight"] = "bold";
         optionsLink.style["font-size"] = "10px";
@@ -99,7 +99,7 @@ function injectPageContextJS(scriptCode) {
 }
 
 function injectPageContextJSFile(fileLocation) {
-    return injectPageContextScript('src', chrome.extension.getURL(fileLocation));
+    return injectPageContextScript('src', chrome.runtime.getURL(fileLocation));
 }
 
 modifyPage();

@@ -13,7 +13,7 @@ class LinkData {
 
     createIcon(caption) {
         var icon = document.createElement("img");
-        icon.src = chrome.extension.getURL("images/" + this.image);
+        icon.src = chrome.runtime.getURL("images/" + this.image);
         icon.width = 32;
         icon.height = 32;
         icon.style["vertical-align"] = "middle";
